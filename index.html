@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=yes">
+  <title>小抱枕社区-管理后台</title>
+  <!-- <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="static/reset.css">
+    <style>
+        .loading-img{
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px
+        }
+    </style>
+</head>
+
+
+<body>
+    <script type="text/javascript">
+        var body = document.getElementsByTagName('body')[0];
+        var img = document.createElement('img');
+        img.src = 'static/loading.gif';
+        img.setAttribute ('class','loading-img');
+        body.appendChild(img);
+    </script>
+    <div id="app"></div>
+</body>
+<script src="static/tinymce/tinymce.min.js"></script>
+<script>
+    setTimeout(function(){
+        var img = document.getElementsByClassName('loading-img')[0];
+        img.style.display = 'none';
+    },2000)
+
+</script>
+</html>
